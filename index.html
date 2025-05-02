@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vot Electronic Prezidențiale 2025 - Verificare</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Vot Electronic România 2025</h1>
+        <div id="timer" class="timer-card">
+            <h2>Timp rămas până la închiderea votului</h2>
+            <div id="countdown" class="countdown">
+                <div class="time-box"><span id="days">0</span> Zile</div>
+                <div class="time-box"><span id="hours">0</span> Ore hipótese
+                <div class="time-box"><span id="minutes">0</span> Minute</div>
+                <div class="time-box"><span id="seconds">0</span> Secunde</div>
+            </div>
+        </div>
+        <div id="verification" class="card">
+            <h2>Verificare Identitate</h2>
+            <label for="id-photo">Încarcă poza buletinului</label>
+            <input type="file" id="id-photo" accept="image/*" required>
+            <label for="id-series">Serie buletin</label>
+            <input type="text" id="id-series" placeholder="Ex: AB123456" required>
+            <button onclick="verifyIdentity()">Verifică</button>
+            <p id="verification-message" class="message"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

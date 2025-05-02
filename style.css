@@ -1,0 +1,174 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1e1e2f 0%, #2a2a40 100%);
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #00d4ff;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+    margin-bottom: 30px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 30px;
+}
+
+.timer-card {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.time-box {
+    background: rgba(0, 212, 255, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    min-width: 80px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.time-box span {
+    display: block;
+    font-size: 2rem;
+    color: #00d4ff;
+    font-weight: 600;
+}
+
+.time-box:hover {
+    transform: scale(1.1);
+}
+
+label {
+    display: block;
+    font-size: 1rem;
+    color: #e0e0e0;
+    margin-bottom: 10px;
+}
+
+input[type="file"], input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-size: 1rem;
+    transition: border 0.3s ease;
+}
+
+input[type="file"]:focus, input[type="text"]:focus {
+    outline: none;
+    border: 2px solid #00d4ff;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(45deg, #00d4ff, #8b00ff);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+}
+
+.candidate-list {
+    display: grid;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.candidate-card {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.candidate-card:hover {
+    background: rgba(0, 212, 255, 0.2);
+    transform: translateX(5px);
+}
+
+.candidate-card input[type="radio"] {
+    margin-right: 10px;
+}
+
+.message {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.message.show {
+    opacity: 1;
+}
+
+@media (max-width: 600px) {
+    .container {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .time-box {
+        min-width: 60px;
+    }
+
+    .time-box span {
+        font-size: 1.5rem;
+    }
+}
